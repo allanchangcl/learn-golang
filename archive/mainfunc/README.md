@@ -1,0 +1,3 @@
+go get -u github.com/matryer/is/...
+go test
+go get github.com/kr/pretty
