@@ -1,0 +1,12 @@
+package main
+
+type Token int
+
+const (
+	And Token = iota // &
+	Or               // |
+	Add              // +
+	Sub              // -
+	Ident
+	Period // .
+)
