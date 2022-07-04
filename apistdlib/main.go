@@ -62,6 +62,7 @@ func main() {
 
 	// pass dependency to HomeHandler
 	h := homepage.NewHandlers(logger)
+	// a := aboutpage.NewHandlers(logger)
 	a := aboutpage.NewHandlers(logger)
 
 	mux := http.NewServeMux()
