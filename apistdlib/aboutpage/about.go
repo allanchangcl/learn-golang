@@ -42,7 +42,7 @@ func (h *Handlers) SetupRoutes(mux *http.ServeMux) {
 	// mux.HandleFunc("/", h.Home)
 	// mux.HandleFunc("/about", h.Logger(h.About))
 	// mux.HandleFunc("/about", h.Logger(h.About))
-	mux.HandleFunc("/about", h.mwl.LogHandler(h.About))
+	mux.HandleFunc("/about", h.mwl.LogHandler(h.About, "aboutpage"))
 }
 
 // func Home(w http.ResponseWriter, r *http.Request) {
