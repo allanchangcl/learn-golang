@@ -19,10 +19,10 @@ func init() {
 	if err := godotenv.Load(); err != nil {
 		log.Print("No .env file found")
 
-		err := godotenv.Load()
-		if err != nil {
-			log.Fatal("Error loading .env file")
-		}
+		// err := godotenv.Load()
+		// if err != nil {
+		// 	log.Fatal("Error loading .env file")
+		// }
 
 		// godotenv.Load()
 		// number := 12
@@ -31,7 +31,7 @@ func init() {
 }
 
 func redirectTLS(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "https://localhost:4343"+r.RequestURI, http.StatusMovedPermanently)
+http.Redirect(w, r, "https://localhost:4343"+r.RequestURI, http.StatusMovedPermanently)
 }
 
 // func HomeHandler(w http.ResponseWriter, r *http.Request) {
