@@ -1,9 +1,10 @@
 package aboutpage
 
 import (
-	"apistdlib/middleware"
 	"log"
 	"net/http"
+
+	"apistdlib/middleware"
 )
 
 const message = "This is About Page"

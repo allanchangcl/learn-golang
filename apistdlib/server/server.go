@@ -42,5 +42,4 @@ func New(mux *http.ServeMux, ServiceAddr string) *http.Server {
 	}
 
 	return srv
-
 }
