@@ -1,12 +1,14 @@
 package main
 
 import (
-	"apistdlib/aboutpage"
-	"apistdlib/homepage"
-	"apistdlib/server"
 	"log"
 	"net/http"
 	"os"
+
+	"apistdlib/aboutpage"
+	"apistdlib/contactpage"
+	"apistdlib/homepage"
+	"apistdlib/server"
 
 	"github.com/joho/godotenv"
 )
@@ -17,7 +19,7 @@ import (
 func init() {
 	// loads values from .env into the system
 	if err := godotenv.Load(); err != nil {
-		          log.Print("No .env file found")
+		log.Print("No .env file found")
 
 		// err := godotenv.Load()
 		// if err != nil {
@@ -63,6 +65,7 @@ func main() {
 	h := homepage.NewHandlers(logger)
 	// a := aboutpage.NewHandlers(logger)
 	a := aboutpage.NewHandlers(logger)
+	c := contactpage.NewHandlers(logger)
 
 	mux := http.NewServeMux()
 	// mux.HandleFunc("/", HomeHandler)
@@ -71,6 +74,7 @@ func main() {
 	// mux.HandleFunc("/", h.Home)
 	h.SetupRoutes(mux)
 	a.SetupRoutes(mux)
+	c.SetupRoutes(mux)
 	// mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 	// 	// fmt.Println(message)
 	// 	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
