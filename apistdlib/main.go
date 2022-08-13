@@ -1,14 +1,13 @@
 package main
 
 import (
-	"log"
-	"net/http"
-	"os"
-
 	"apistdlib/aboutpage"
 	"apistdlib/contactpage"
 	"apistdlib/homepage"
 	"apistdlib/server"
+	"log"
+	"net/http"
+	"os"
 
 	"github.com/joho/godotenv"
 )
